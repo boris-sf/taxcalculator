@@ -1,0 +1,22 @@
+[
+	{
+		"description": "imported bottle of perfume",
+		"unitPrice": 27.99,
+		"count": 1
+	},
+	{
+		"description": "bottle of perfume",
+		"unitPrice": 18.99,
+		"count": 1
+	},
+	{
+		"description": "packet of headache pills",
+		"unitPrice": 9.75,
+		"count": 1
+	},
+	{
+		"description": "box of imported chocolates",
+		"unitPrice": 11.25,
+		"count": 1
+	}
+]
