@@ -14,18 +14,18 @@ import taxcalculator.model.Product;
 @Component
 public class TaxCalculationService {
 
-	private final TaxRateService taxes;
+	private final TaxRateService taxeRateService;
 
 	@Autowired
-	public TaxCalculationService(TaxRateService taxes) {
-		ensureNotNull(taxes, "TaxRateService");
-		this.taxes = taxes;
+	public TaxCalculationService(TaxRateService taxeRateService) {
+		ensureNotNull(taxeRateService, "TaxRateService");
+		this.taxeRateService = taxeRateService;
 	}
 
 	public double calculateTax(Collection<Product> items) {
 		double total = 0;
 		for (Product item : items) {
-			total += calculateTaxAmount(item.getTotalCost(), taxes.rate(item));
+			total += calculateTaxAmount(item.getTotalCost(), taxeRateService.rate(item));
 		}
 		return roundTaxValue(total);
 	}

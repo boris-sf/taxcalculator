@@ -13,17 +13,17 @@ public class TaxRateService {
 	public static final int BASIC_TAX = 10;
 	public static final int IMPORT_TAX = 5;
 
-	private final ProductService products;
+	private final ProductService productService;
 
 	@Autowired
-	public TaxRateService(ProductService products) {
-		ensureNotNull(products, "ProductService");
-		this.products = products;
+	public TaxRateService(ProductService productService) {
+		ensureNotNull(productService, "ProductService");
+		this.productService = productService;
 	}
 
 	public double rate(Product value) {
-		double result = products.isBasicTaxFree(value) ? 0 : BASIC_TAX;
-		if (products.isImported(value)) {
+		double result = productService.isBasicTaxFree(value) ? 0 : BASIC_TAX;
+		if (productService.isImported(value)) {
 			result += IMPORT_TAX;
 		}
 		return result;
