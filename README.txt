@@ -3,7 +3,7 @@ GENERAL INFORMATION
 The test task is designed as Spring Boot application. 
 The result of maven build procedure is executable jar that may be run with java -jar command.
 When app is running the tax calculation service is available via http://localhost:8080/taxcalculator
-(see testset/runset.bat for ivocation examples)
+(see testset/runset.bat for invocation examples)
 
 
 DESIGN
@@ -28,7 +28,7 @@ DESIGN
                |                                                       iterates over all items,          |  of basic tax?   |
                |                                               calculates sum of individual tax values,  | ---------------> |
                |                                                     rounds obtained sum according       | <--- boolean --- |
-               |                                                        ro rules described in spec       |                  |
+               |                                                       to rules described in spec        |                  |
                |                                                                  |                      |                  |
                |                                                                  |                      |    is imported?  |
                |                                                                  |                      | ---------------> |
